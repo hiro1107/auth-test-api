@@ -9,7 +9,7 @@ class Api::V1::UsersController < ApplicationController
     if user.save
       render json: { message: "Successfully created a user" }
     else
-      render json: { message: "Signup failed" }, status: 500
+      render json: { message: "Signup failed" }, status: 403
     end
   end
 
